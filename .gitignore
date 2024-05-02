@@ -26,6 +26,8 @@ coverage
 plugins/backstage-plugin-snyk/dist-scalprum
 plugins/backstage-plugin-snyk/dist
 
+plugins/backstage-plugin-snyk/backstage-plugin-snyk*.tgz
+
 # Node version directives
 .nvmrc
 
