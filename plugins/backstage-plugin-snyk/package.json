@@ -2,7 +2,7 @@
   "name": "backstage-plugin-snyk",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "0.0.0-development",
+  "version": "2.4.0-d1",
   "license": "Apache-2.0",
   "sideEffects": true,
   "backstage": {
