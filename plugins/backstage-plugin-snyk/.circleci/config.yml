@@ -1,0 +1,80 @@
+version: 2.1
+orbs:
+  snyk: snyk/snyk@1.1.2
+
+jobs:
+  build-test-monitor:
+      docker:
+        # specify the version
+        - image: cimg/node:18.19.0
+
+      steps:
+        - checkout
+        - run:
+            name: "Install deps"
+            command: |
+              yarn install
+        - run: yarn add semantic-release@19 --dev
+        - run:
+            name: "Build"
+            command: |
+              yarn tsc
+        - run: yarn add ms
+        - run: yarn remove ms
+        - snyk/scan:
+            fail-on-issues: true
+            severity-threshold: high
+            monitor-on-build: true
+            token-variable: SNYK_TEST_TOKEN
+        - run: yarn run semantic-release
+
+  build-test:
+      docker:
+        # specify the version
+        - image: cimg/node:18.19.0
+
+      steps:
+        - checkout
+        - run:
+            name: "Install deps"
+            command: |
+              yarn install
+        - run:
+            name: "Build"
+            command: |
+              yarn tsc
+        - snyk/scan:
+            fail-on-issues: true
+            severity-threshold: high
+            monitor-on-build: false
+            token-variable: SNYK_TEST_TOKEN
+
+workflows:
+  version: 2.1
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - main
+    jobs:
+      - build-test-monitor:
+          context: SNYK
+  build-test-monitor-publish:
+    jobs:
+      - build-test-monitor:
+          context: SNYK
+          filters:
+            branches:
+              only:
+                  - main
+  build-test:
+      jobs:
+        - build-test:
+            context: SNYK
+            filters:
+              branches:
+                ignore:
+                  - main

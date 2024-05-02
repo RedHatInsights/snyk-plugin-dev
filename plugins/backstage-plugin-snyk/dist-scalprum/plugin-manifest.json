@@ -1,0 +1,11 @@
+{
+  "name": "backstage-plugin-snyk",
+  "version": "0.0.0-development",
+  "extensions": [],
+  "registrationMethod": "callback",
+  "baseURL": "auto",
+  "loadScripts": [
+    "backstage-plugin-snyk.63286cbf7fee89685ddc.js"
+  ],
+  "buildHash": "63286cbf7fee89685ddc84865a360ac7"
+}

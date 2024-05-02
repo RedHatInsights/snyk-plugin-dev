@@ -1,0 +1,2 @@
+(self.webpackChunkbackstage_plugin_snyk=self.webpackChunkbackstage_plugin_snyk||[]).push([[2979],{68416:e=>{e.exports=function(e){return{name:"Plain text",aliases:["text","txt"],disableAutodetect:!0}}}}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_highlight_plaintext.ac2135ea.chunk.js.map

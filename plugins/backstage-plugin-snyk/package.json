@@ -1,0 +1,71 @@
+{
+  "name": "backstage-plugin-snyk",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "version": "0.0.0-development",
+  "license": "Apache-2.0",
+  "sideEffects": true,
+  "backstage": {
+    "role": "frontend-plugin"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "scripts": {
+    "build": "yarn tsc",
+    "test": "backstage-cli test",
+    "export-dynamic": "janus-cli package export-dynamic-plugin"
+  },
+  "dependencies": {
+    "@backstage/catalog-model": "^1.4.5",
+    "@backstage/core-components": "^0.14.3",
+    "@backstage/core-plugin-api": "^1.9.1",
+    "@backstage/plugin-catalog-react": "^1.11.2",
+    "@janus-idp/cli": "^1.8.1",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@snyk/dep-graph": "https://github.com/adamrdrew/dep-graph/releases/download/2.8.1-special/snyk-dep-graph-2.8.1-special.tgz",
+    "@types/react-dom": "^18.2.18",
+    "react-circular-progressbar": "^2.1.0",
+    "react-use": "^17.4.0"
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.26.2",
+    "@backstage/dev-utils": "^1.0.30",
+    "@backstage/test-utils": "^1.5.3",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.2.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "msw": "^2.0.5",
+    "node-fetch": "^3.3.2",
+    "snyk": "^1.1243.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1 || ^17.0.0",
+    "react-dom": "^16.13.1 || ^17.0.0",
+    "react-router-dom": "^6.18.0"
+  },
+  "browser": {
+    "crypto": false
+  },
+  "files": [
+    "dist",
+    "dist-scalprum"
+  ],
+  "configSchema": "config.d.ts",
+  "pkg": {
+    "scripts": [
+      "dist",
+      "dist-scalprum"
+    ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}

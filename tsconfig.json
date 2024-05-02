@@ -1,0 +1,18 @@
+{
+  "extends": "@backstage/cli/config/tsconfig.json",
+  "include": [
+    "packages/*/src",
+    "plugins/*/src",
+    "plugins/*/dev",
+    "plugins/*/migrations"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "outDir": "dist-types",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "backstage-plugin-snyk": ["./plugins/backstage-plugin-src"],
+    }
+  }
+}
