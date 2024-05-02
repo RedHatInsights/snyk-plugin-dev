@@ -26,7 +26,7 @@
     "@janus-idp/cli": "^1.8.1",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
-    "@snyk/dep-graph": "https://github.com/adamrdrew/dep-graph/releases/download/2.8.1-special/snyk-dep-graph-2.8.1-special.tgz",
+    "@snyk/dep-graph": "^2.8.1",
     "@types/react-dom": "^18.2.18",
     "react-circular-progressbar": "^2.1.0",
     "react-use": "^17.4.0"

@@ -23,6 +23,9 @@ coverage
 !.yarn/sdks
 !.yarn/versions
 
+plugins/backstage-plugin-snyk/dist-scalprum
+plugins/backstage-plugin-snyk/dist
+
 # Node version directives
 .nvmrc
 

@@ -1,2 +1,0 @@
-(self.webpackChunkbackstage_plugin_snyk=self.webpackChunkbackstage_plugin_snyk||[]).push([[6152],{80052:n=>{n.exports=function(n){return{name:"VBScript in HTML",subLanguage:"xml",contains:[{begin:"<%",end:"%>",subLanguage:"vbscript"}]}}}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_highlight_vbscriptHtml.74ecbf97.chunk.js.map
