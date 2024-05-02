@@ -22,7 +22,8 @@
     "lint": "backstage-cli repo lint --since origin/master",
     "lint:all": "backstage-cli repo lint",
     "prettier:check": "prettier --check .",
-    "new": "backstage-cli new --scope internal"
+    "new": "backstage-cli new --scope internal",
+    "postinstall": "patch-package"
   },
   "workspaces": {
     "packages": [
@@ -56,7 +57,9 @@
     ]
   },
   "dependencies": {
+    "crypto-browserify": "^3.12.0",
     "patch-package": "^8.0.0",
-    "postinstall-postinstall": "^2.1.0"
+    "postinstall-postinstall": "^2.1.0",
+    "stream-browserify": "^3.0.0"
   }
 }
