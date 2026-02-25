@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import * as depgraph from "@snyk/dep-graph";
 import { SnykCircularDepCounter } from "./SnykCircularDepCountersComponent";
 import { DepgraphGetResponseType } from "../../../types/types";

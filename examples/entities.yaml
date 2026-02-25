@@ -19,6 +19,36 @@ spec:
   system: examples
   providesApis: [example-grpc-api]
 ---
+# Example component with Snyk annotations (project-ids). Replace org-id and project-ids with your Snyk org/projects.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-snyk-service
+  description: Example service with Snyk security data
+  annotations:
+    snyk.io/org-id: 361fd3c0-41d4-4ea4-ba77-09bb17890967
+    snyk.io/project-ids: 0cc9d21b-4ac7-4f27-8c6a-b32b4cdf5c68
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
+  system: examples
+---
+# Example component with Snyk annotations (GitHub project slug). Replace with your Snyk org and repo slug.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-snyk-website
+  description: Example website with Snyk security data
+  annotations:
+    snyk.io/org-id: 361fd3c0-41d4-4ea4-ba77-09bb17890967
+    github.com/project-slug: your-org/your-repo
+spec:
+  type: website
+  lifecycle: experimental
+  owner: guests
+  system: examples
+---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
 apiVersion: backstage.io/v1alpha1
 kind: API

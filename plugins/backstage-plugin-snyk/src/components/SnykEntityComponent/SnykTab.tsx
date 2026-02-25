@@ -1,4 +1,3 @@
-import React from "react";
 import {
   StructuredMetadataTable,
   Progress,
@@ -41,7 +40,7 @@ export const generateSnykTabForProject = (
         projectId
       );
       const genericIssues: Array<Issue> = allIssues.data.filter((issue) =>
-        genericIssuesTypeArray.includes(issue.attributes.type)
+        (genericIssuesTypeArray as TypeDef[]).includes(issue.attributes.type)
       );
       const licenseIssues: Array<Issue> = allIssues.data.filter(
         (issue) => issue.attributes.type === "license"

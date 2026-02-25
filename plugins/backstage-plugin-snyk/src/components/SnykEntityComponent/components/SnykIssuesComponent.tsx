@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Table, TableColumn, Link } from "@backstage/core-components";
 import { Issue } from "../../../types/unifiedIssuesTypes";
 
