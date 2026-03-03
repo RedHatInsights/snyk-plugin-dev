@@ -1,5 +1,4 @@
 import { Entity } from "@backstage/catalog-model";
-import React from "react";
 import { InfoCard, WarningPanel, Progress } from "@backstage/core-components";
 import { useApi } from "@backstage/core-plugin-api";
 import { snykApiRef } from "../../api";

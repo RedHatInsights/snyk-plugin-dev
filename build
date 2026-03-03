@@ -1,0 +1,23 @@
+#!/bin/bash
+# Package the Snyk plugin as a dynamic plugin (janus-cli export-dynamic).
+# Allow lockfile updates during export-dynamic (janus-cli runs yarn install internally)
+# Run from plugin dir via npx to avoid "backstage-plugin-snyk@workspace:." lockfile resolution error (yarn workspace triggers it)
+export YARN_ENABLE_IMMUTABLE_INSTALLS=false
+
+cd plugins/backstage-plugin-snyk/ || exit 1
+npx janus-cli package export-dynamic-plugin
+cd ../.. || exit 1
+
+cd plugins/backstage-plugin-snyk/ || exit 1
+rm -f *.tgz
+npm pack ./dist-dynamic
+cd ../..
+
+mv plugins/backstage-plugin-snyk/backstage-plugin-snyk-*.tgz . 2>/dev/null || true
+
+if [ -n "$(ls -A backstage-plugin-snyk-*.tgz 2>/dev/null)" ]; then
+  for f in backstage-plugin-snyk-*.tgz; do
+    echo "Built: $f"
+    sha256sum "$f" | awk '{print $1}' | xxd -r -p | base64 | xargs -I {} echo "sha256-{}"
+  done
+fi

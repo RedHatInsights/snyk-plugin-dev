@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { IssuesCount } from "../../../types/types";
 import {useSnykCounterStyle} from './SnykCounterStyle'
 
