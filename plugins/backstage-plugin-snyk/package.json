@@ -30,10 +30,10 @@
     "repack": "yarn export-dynamic && yarn pack --prod"
   },
   "dependencies": {
-    "@backstage/catalog-model": "^1.4.5",
-    "@backstage/core-components": "^0.14.3",
-    "@backstage/core-plugin-api": "^1.9.1",
-    "@backstage/plugin-catalog-react": "^1.11.2",
+    "@backstage/catalog-model": "^1.10.1",
+    "@backstage/core-components": "^0.18.14",
+    "@backstage/core-plugin-api": "^1.12.10",
+    "@backstage/plugin-catalog-react": "^3.2.3",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
     "@snyk/dep-graph": "^2.8.1",
@@ -42,8 +42,8 @@
   },
   "devDependencies": {
     "@backstage/cli": "^0.35.4",
-    "@backstage/dev-utils": "^1.0.30",
-    "@backstage/test-utils": "^1.5.3",
+    "@backstage/dev-utils": "^1.1.27",
+    "@backstage/test-utils": "^1.7.22",
     "@janus-idp/cli": "^1.8.1",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.2.0",
