@@ -17922,7 +17922,7 @@ __metadata:
     node-fetch: "npm:^3.3.2"
     react-circular-progressbar: "npm:^2.1.0"
     react-use: "npm:^17.4.0"
-    snyk: "npm:^1.1243.0"
+    snyk: "npm:^1.1308.1"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
     react-dom: ^16.13.1 || ^17.0.0 || ^18.0.0
@@ -18243,7 +18243,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"boolean@npm:^3.0.1":
+"boolean@npm:*, boolean@npm:^3.0.1":
   version: 3.2.0
   resolution: "boolean@npm:3.2.0"
   checksum: 10c0/6a0dc9668f6f3dda42a53c181fcbdad223169c8d87b6c4011b87a8b14a21770efb2934a778f063d7ece17280f8c06d313c87f7b834bb1dd526a867ffcd00febf
@@ -22423,6 +22423,13 @@ __metadata:
   version: 2.5.2
   resolution: "fast-memoize@npm:2.5.2"
   checksum: 10c0/6f658f182f6eaf25a8ecdaf49affee4cac20df4e61e7ef3f04145fb86e887e7a0bd9975740ce88a9015da99459d7386eaf1342ac15be820f72f4be1ecf934d95
+  languageName: node
+  linkType: hard
+
+"fast-printf@npm:^1.6.9":
+  version: 1.6.10
+  resolution: "fast-printf@npm:1.6.10"
+  checksum: 10c0/630cccbef8349a6eeada9958c9391e9d14b5bd9527dd28d9e7e9f295b006c640ddca8fc2470cff55ea5c6c92ca530488bbadbf7c24f4852ad8c34d9155da9d75
   languageName: node
   linkType: hard
 
@@ -32973,6 +32980,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"roarr@npm:*":
+  version: 7.21.7
+  resolution: "roarr@npm:7.21.7"
+  dependencies:
+    fast-printf: "npm:^1.6.9"
+    safe-stable-stringify: "npm:^2.4.3"
+    semver-compare: "npm:^1.0.0"
+  checksum: 10c0/f162bec57710b293bc609513846d03bdb28304be6e143074882d1fcf8319198baf61b5cc092fb9eed31f0808af2271eca0bea43271980ca5803aa89371872092
+  languageName: node
+  linkType: hard
+
 "roarr@npm:^2.15.3":
   version: 2.15.4
   resolution: "roarr@npm:2.15.4"
@@ -33322,7 +33340,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-stable-stringify@npm:^2.2.0, safe-stable-stringify@npm:^2.3.1":
+"safe-stable-stringify@npm:^2.2.0, safe-stable-stringify@npm:^2.3.1, safe-stable-stringify@npm:^2.4.3":
   version: 2.5.0
   resolution: "safe-stable-stringify@npm:2.5.0"
   checksum: 10c0/baea14971858cadd65df23894a40588ed791769db21bafb7fd7608397dbdce9c5aac60748abae9995e0fc37e15f2061980501e012cd48859740796bea2987f49
@@ -33798,15 +33816,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"snyk@npm:^1.1243.0":
-  version: 1.1302.1
-  resolution: "snyk@npm:1.1302.1"
+"snyk@npm:^1.1308.1":
+  version: 1.1308.1
+  resolution: "snyk@npm:1.1308.1"
   dependencies:
     "@sentry/node": "npm:^7.36.0"
+    boolean: "npm:*"
     global-agent: "npm:^3.0.0"
+    roarr: "npm:*"
   bin:
     snyk: bin/snyk
-  checksum: 10c0/b136e16c57d27aa3cbfae9ca5e475865282206df89ea62acc15e6ac8087076a67af90ece1c6b16c9d9e2fdddd9e4155f7473315586e161435d017b9be5c38f89
+  checksum: 10c0/3ba2807fde9e1e0188d77a7e727680e556174df25ac7f2acffad0cdc60ba2535626ad763a78701aea90793963a76f3dcb626b6c7e972cec0295c9007df56680d
   languageName: node
   linkType: hard
 
